@@ -33,11 +33,12 @@ const config = {
     external({
       includeDependencies: true,
     }),
-    typescript({
-      typescript: typescriptEngine,
-      include: ['*.js+(|x)', '**/*.js+(|x)'],
-      exclude: ['coverage', 'config', 'dist', 'node_modules/**', '*.test.{js+(|x), ts+(|x)}', '**/*.test.{js+(|x), ts+(|x)}'],
-    }),
+    typescript(),
+    // typescript({
+    //   typescript: typescriptEngine,
+    //   include: ['*.js+(|x)', '**/*.js+(|x)'],
+    //   exclude: ['coverage', 'config', 'dist', 'node_modules/**', '*.test.{js+(|x), ts+(|x)}', '**/*.test.{js+(|x), ts+(|x)}'],
+    // }),
     commonjs(),
     babel({
       extensions: [...DEFAULT_EXTENSIONS, '.ts', 'tsx'],
